@@ -1,0 +1,270 @@
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@100&family=Prompt:wght@300&family=Roboto:wght@500&display=swap');
+/*
+Poppins Thin 100 Texto interno
+Prompt Light 300 Italic menu
+Roboto Medium 500 - títulos 
+Open Sans light 300 para subtítulos
+*/
+
+
+/* Cores
+
+
+#BBBFBF     - cor
+#7A7D7D     - sombra
+#F8FCFC     -cor
+#3C3D3D     -sombra
+#DEE3E3     -cor
+
+*/
+
+
+/* Variáveis */
+:root {
+    --fonte-titulo: 'Roboto', sans-serif;
+    --fonte-subtitulo: font-family: 'Open Sans', sans-serif;
+    --fonte-menu: 'Prompt', sans-serif;
+    --fonte-texto-interno: 'Poppins', sans-serif;
+    /* cores variaveis */
+
+
+}
+
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+.container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+        "header"
+        "main-section"
+        "portifolio-section"
+        "gallery-section"
+        "tech-section"
+        "footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: 80px 100vh 100vh 100vh 100vh 60px;
+
+}
+
+/* --------------------------------------------*/
+.container>div,
+.main-section-container>div,
+.portifolio-section>div,
+.container-portifolio-section>div,
+.container-gallery>div {
+    border: 1px dashed #888;
+}
+
+/* ----------------navegação principal-------------*/
+.header {
+    grid-area: header;
+}
+
+#header-menu {
+    display: flex;
+    box-sizing: border-box;
+    padding: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    background: #e7e7e7;
+
+}
+#menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;  
+    font-family: var(--fonte-menu);
+    font-weight: 300;
+    text-transform:uppercase;
+    letter-spacing: 0.1rem;
+    transition: all 0.5s;
+}
+
+#header-menu a:hover {
+    background: rgba(161, 27, 27, 0.05);
+}
+
+#logo {    
+    color: rgb(0, 0, 0);
+    text-decoration: none;  
+    text-transform:uppercase;
+    font-family: var(--fonte-titulo);
+    letter-spacing: 0.2rem;
+    font-size: 2rem;
+    
+}
+#menu {
+    display: flex;
+    list-style-type: none;
+    gap: .5rem;
+
+}
+
+#menu a {
+    display: block;
+    padding: .5rem;
+}
+
+#btnMobile {
+    display: none;
+}
+
+
+/* -------------------------------------------*/
+.main-section {
+    grid-area: main-section;
+}
+
+.main-section-container {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+        "info-section ilustr-section"
+        "contato-section contato-section";
+    grid-template-columns: 1.5fr 1.5fr;
+    grid-template-rows: 1.75fr 0.5fr;
+}
+
+.info-section {
+    grid-area: info-section;
+}
+
+.ilustr-section {
+    grid-area: ilustr-section;
+}
+
+.contato-section {
+    grid-area: contato-section;
+}
+
+/* ------------------------------------------- */
+
+.portifolio-section {
+    grid-area: portifolio-section;
+}
+
+.container-portifolio-section {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+        "card-0 card-1"
+        "card-2 card-3"
+        "btn-ver-mais btn-ver-mais";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 0.5fr;
+}
+
+.card-0 {
+    grid-area: card-0;
+}
+
+.card-1 {
+    grid-area: card-1;
+}
+
+.card-2 {
+    grid-area: card-2;
+}
+
+.card-3 {
+    grid-area: card-3;
+}
+
+.btn-ver-mais {
+    grid-area: btn-ver-mais;
+}
+
+/* ------------------------------------------- */
+.gallery-section {
+    grid-area: gallery-section;
+}
+
+.container-gallery {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas: "lang-1 lang-4 lang-9"
+        "lang-1 lang-5 lang-10"
+        "lang-2 lang-6 lang-11"
+        "lang-3 lang-7 lang-11"
+        "lang-3 lang-7 lang-12"
+        "lang-8 lang-8 lang-8";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr .8fr;
+}
+
+
+.lang-1 {
+    grid-area: lang-1;
+}
+
+.lang-4 {
+    grid-area: lang-4;
+}
+
+.lang-9 {
+    grid-area: lang-9;
+}
+
+.lang-5 {
+    grid-area: lang-5;
+}
+
+.lang-10 {
+    grid-area: lang-10;
+}
+
+.lang-2 {
+    grid-area: lang-2;
+}
+
+.lang-6 {
+    grid-area: lang-6;
+}
+
+.lang-11 {
+    grid-area: lang-11;
+}
+
+.lang-3 {
+    grid-area: lang-3;
+}
+
+.lang-7 {
+    grid-area: lang-7;
+}
+
+.lang-12 {
+    grid-area: lang-12;
+}
+
+.lang-8 {
+    grid-area: lang-8;
+}
+
+
+
+/* ------------------------------------------- */
+.tech-section {
+    grid-area: tech-section;
+}
+
+
+/* -------------------------------------------*/
+.footer {
+    grid-area: footer;
+}
