@@ -87,15 +87,7 @@ html {
 
 
 /* --------------------------------------------*/
-.container>div,
-.main-section-container>div,
-.portifolio-section>div,
-.container-portifolio-section>div,
-.container-gallery>div,
-.footer>div {
-    border: 1px dashed #888;
 
-}
 
 /* ----------------navegação principal-------------*/
 .header {
@@ -175,7 +167,7 @@ html {
 .info-section {
     box-sizing: border-box;
     grid-area: info-section;
-    padding: 2rem;
+    padding: 1rem;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -293,13 +285,13 @@ html {
 .container-portifolio-section {
     display: grid;
     width: 100%;
-    /* height: 100%; */
+    height: 100%;
     grid-template-areas:
         "card-0 card-1"
         "card-2 card-3"
         "btn-ver-mais btn-ver-mais";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 0.4fr;
+    grid-template-rows: 1fr 1fr ;
     row-gap: 1rem;
 }
 
@@ -435,6 +427,10 @@ margin-left: 10px;
 /* -------------Linguagens------------ */
 .lang-section {
     grid-area: lang-section;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;  
 }
 
 .container-lang {
@@ -452,6 +448,20 @@ margin-left: 10px;
 
 }
 
+.lang-section h1{
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 2px solid var(--cor-texto-dark-mode);  
+    border-width: 5px;
+    font-size: 2.5rem;
+    font-family: var(--fonte-titulo);
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+    text-align: center;
+    width: 300px;    
+    margin: 5rem 0;
+    text-shadow: 1px 1px 20px rgb(0, 0, 0);
+}
 .centralize {
     display: flex;
     justify-content: center;
