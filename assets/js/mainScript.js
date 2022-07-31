@@ -1,6 +1,5 @@
+//Funcão menu Toggle
 const btnMobile = document.getElementById('btnMobile');
-
-
 function toggleMenu(event) {
     if (event.type === 'touchstart') event.preventDefault();
     const nav = document.getElementById('nav');
@@ -15,3 +14,14 @@ function toggleMenu(event) {
 }
 btnMobile.addEventListener('click', toggleMenu);
 btnMobile.addEventListener('touchstart', toggleMenu);
+
+/* para apresentação */
+const infosHeader = ["Desenvolvedor", "programador", "Front-End Developer"];
+
+/*Adicionar classe no html*/
+//Div Linguagens???
+let langsClasseChildren = document.querySelector('.container-lang').children
+Array.from(langsClasseChildren).forEach((langDiv)=>{
+langDiv.classList.add('centralize')
+})
+

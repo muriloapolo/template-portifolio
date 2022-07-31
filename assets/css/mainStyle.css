@@ -1,5 +1,8 @@
 /* Fontes */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@100&family=Prompt:wght@300&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,300;1,300&family=Prompt:wght@300&family=Roboto:wght@500&display=swap');
+/* Font Awesomne Icons*/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css');
+
 /*
 Poppins Thin 100 Texto interno
 Prompt Light 300 Italic menu
@@ -39,10 +42,19 @@ Open Sans light 300 para subtítulos
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
+html {
+    scroll-behavior: smooth;
+}
 
-
+/* -------
+#BBBFBF     - cor
+#7A7D7D     - sombra
+#F8FCFC     -cor
+#3C3D3D     -sombra
+#DEE3E3     -cor---------- */
 .container {
     display: grid;
     width: 100%;
@@ -51,21 +63,32 @@ Open Sans light 300 para subtítulos
         "header"
         "main-section"
         "portifolio-section"
-        "gallery-section"
+        "lang-section"
         "tech-section"
         "footer";
     grid-template-columns: 1fr;
-    grid-template-rows: 80px 100vh 100vh 100vh 100vh 60px;
+    /* grid-template-rows: 80px 100vh 100vh 100vh 100vh 40px; */
+    /* grid-template-rows: 20vh 100vh 100vh 100vh 100vh 20vh; */
+    grid-template-rows: 70px auto 1fr 1fr 1fr .15fr;
+    background-color: #BBBFBF;
+
+    background-repeat: repeat;
+    background-size: contain;
+    max-width: 1400px;
+    margin: 0 auto;
 
 }
+
 
 /* --------------------------------------------*/
 .container>div,
 .main-section-container>div,
 .portifolio-section>div,
 .container-portifolio-section>div,
-.container-gallery>div {
+.container-gallery>div,
+.footer>div {
     border: 1px dashed #888;
+
 }
 
 /* ----------------navegação principal-------------*/
@@ -81,13 +104,15 @@ Open Sans light 300 para subtítulos
     justify-content: space-around;
     background: #e7e7e7;
 
+
 }
+
 #menu a {
     color: rgb(0, 0, 0);
-    text-decoration: none;  
+    text-decoration: none;
     font-family: var(--fonte-menu);
     font-weight: 300;
-    text-transform:uppercase;
+    text-transform: uppercase;
     letter-spacing: 0.1rem;
     transition: all 0.5s;
 }
@@ -96,16 +121,18 @@ Open Sans light 300 para subtítulos
     background: rgba(161, 27, 27, 0.05);
 }
 
-#logo {    
+#logo {
     color: rgb(0, 0, 0);
-    text-decoration: none;  
-    text-transform:uppercase;
+    text-decoration: none;
+    text-transform: uppercase;
     font-family: var(--fonte-titulo);
     letter-spacing: 0.2rem;
-    font-size: 2rem;
-    
+    font-size: 1.6rem;
+
 }
+
 #menu {
+
     display: flex;
     list-style-type: none;
     gap: .5rem;
@@ -134,18 +161,57 @@ Open Sans light 300 para subtítulos
     grid-template-areas:
         "info-section ilustr-section"
         "contato-section contato-section";
-    grid-template-columns: 1.5fr 1.5fr;
-    grid-template-rows: 1.75fr 0.5fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.25fr;
 }
 
 .info-section {
+    box-sizing: border-box;
     grid-area: info-section;
+    padding: 2rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.info-section h1 {
+    /* white-space: nowrap; */
+    font-family: var(--fonte-titulo);
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin-top: 5rem;
+}
+.info-id-principal{
+    font-size: 1.7rem;
+    font-family: var(--fonte-subtitulo);
+    font-weight: 300;
+    margin-bottom: 3rem;
+}
+.info-id-texto{
+    font-family: var(--fonte-texto-interno);  
+    font-style: italic;
+    font-weight: 300;  
+    font-size: 1.2rem;
+    color: rgb(50, 49, 56);
+}
+/* fim texto section*/
+
 
 .ilustr-section {
     grid-area: ilustr-section;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.ilustr-section > img{
+    /* display: block; */
+   
 
+    width: 80%;
+    
+}
 .contato-section {
     grid-area: contato-section;
 }
@@ -159,13 +225,13 @@ Open Sans light 300 para subtítulos
 .container-portifolio-section {
     display: grid;
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
     grid-template-areas:
         "card-0 card-1"
         "card-2 card-3"
         "btn-ver-mais btn-ver-mais";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 0.5fr;
+    grid-template-rows: 1fr 1fr 0.25fr;
 }
 
 .card-0 {
@@ -189,11 +255,11 @@ Open Sans light 300 para subtítulos
 }
 
 /* ------------------------------------------- */
-.gallery-section {
-    grid-area: gallery-section;
+.lang-section {
+    grid-area: lang-section;
 }
 
-.container-gallery {
+.container-lang {
     display: grid;
     width: 100%;
     height: 100%;
@@ -205,8 +271,17 @@ Open Sans light 300 para subtítulos
         "lang-8 lang-8 lang-8";
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 2fr 1fr 1fr 1fr 1fr .8fr;
+
 }
 
+.centralize {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    opacity: 0.4;
+
+}
 
 .lang-1 {
     grid-area: lang-1;
@@ -214,6 +289,12 @@ Open Sans light 300 para subtítulos
 
 .lang-4 {
     grid-area: lang-4;
+    opacity: 1;
+    color: rgb(206, 5, 5);
+    background-image: linear-gradient(90deg, rgb(255, 123, 0) 35%, rgb(243, 138, 78) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .lang-9 {
@@ -222,10 +303,23 @@ Open Sans light 300 para subtítulos
 
 .lang-5 {
     grid-area: lang-5;
+    opacity: 1;
+
+
 }
+
+.lang-5 i {
+    color: rgb(128, 128, 255);
+    background-image: linear-gradient(90deg, rgb(74, 74, 252) 35%, rgb(137, 192, 255) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 
 .lang-10 {
     grid-area: lang-10;
+
 }
 
 .lang-2 {
@@ -233,8 +327,20 @@ Open Sans light 300 para subtítulos
 }
 
 .lang-6 {
+
     grid-area: lang-6;
+    opacity: 1;
+
 }
+
+.lang-6 i {
+    color: rgb(255, 238, 0);
+    background-clip: text;
+
+
+}
+
+
 
 .lang-11 {
     grid-area: lang-11;
@@ -246,6 +352,8 @@ Open Sans light 300 para subtítulos
 
 .lang-7 {
     grid-area: lang-7;
+    color: #000;
+    opacity: 1;
 }
 
 .lang-12 {
@@ -254,11 +362,13 @@ Open Sans light 300 para subtítulos
 
 .lang-8 {
     grid-area: lang-8;
+    opacity: 1;
+    color: rgb(0, 83, 160);
 }
 
 
 
-/* ------------------------------------------- */
+/* --------------Parceirias--------------- */
 .tech-section {
     grid-area: tech-section;
 }
@@ -266,5 +376,6 @@ Open Sans light 300 para subtítulos
 
 /* -------------------------------------------*/
 .footer {
+    background-color: #000;
     grid-area: footer;
 }

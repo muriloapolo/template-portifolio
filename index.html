@@ -4,99 +4,222 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portifólio</title>
 
-    <link rel="stylesheet" href="./assets/css/mainStyle.css" />
-    <link rel="stylesheet" href="./assets/css/response.css" />
-    <script src="./assets/js/mainScript.js" defer></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portifólio</title>
+  <link rel="stylesheet" href="./assets/css/mainStyle.css" />
+  <link rel="stylesheet" href="./assets/css/response.css" />
+  <script src="./assets/js/mainScript.js" defer></script>
+</head>
 
-  <body>
-        <!--[if lt IE 7]>
+<body>
+  <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <!-- /* início container principal*/ -->
+  <!-- /* início container principal*/ -->
 
-    <div class="container">
-      <!-- /* header menu principal navegação*/ -->
-      <header id="header-menu" class="header">
-        <a id="logo" href="#">logo</a>
-        <nav id="nav">
-            <button aria-label="Abrir menu" id="btnMobile"><span id="hamburger" aria-controls="menu"
-                    aria-haspopup="true" aria-expanded="false"></span></button>
-            <ul id="menu" role="menu">
-                <li><a href="">Home</a></li>
-                <li><a href="">Lorem</a></li>
-                <li><a href="">Lorem</a></li>
-                <li><a href="">Lorem</a></li>
-            </ul>
-        </nav>
+  <div class="container">
+    <!-- /* header menu principal navegação*/ -->
+    <header id="header-menu" class="header">
+      <a id="logo" href="#">Murilo Apolonio</a>
+      <nav id="nav">
+        <button aria-label="Abrir menu" id="btnMobile"><span id="hamburger" aria-controls="menu" aria-haspopup="true"
+            aria-expanded="false"></span></button>
+        <ul id="menu" role="menu">
+          <li><a href="">Home</a></li>
+          <li><a href="">Lorem</a></li>
+          <li><a href="">Lorem</a></li>
+          <li><a href="">Lorem</a></li>
+        </ul>
+      </nav>
 
-      </header>
-      <!-- /* fim menu principal navegação*/  -->
+    </header>
+    <!-- /* fim menu principal navegação*/  -->
 
-      <!-- /* conteúdo principal*/ -->
-      <main class="main-section">
-        <div class="main-section-container">
-          <div class="info-section">info-section</div>
-          <div class="ilustr-section">ilustr-section</div>
-          <div class="contato-section">contato-section</div>
+    <!-- /* conteúdo principal*/ -->
+    <main class="main-section">
+      <div class="main-section-container">
+        <!-- Info texto -->
+        <div class="info-section">
+          <h1>Olá, meu nome é Murilo Apolonio</h1>
+          <p class="info-id-principal">Eu sou <span id="complemento">Desenvolvedor Front-End</span>
+            <!-- Apenas quando o Js não funcionar -->
+</p>
+          <p class="info-id-texto">
+            Sou baiano, moro em <span id="info-cidade">Salvador-Ba</span>, eu
+            desenvolvo Web Sites para ajudar a tirar sua ideia do papel e divulgá-la
+            para o mundo, ou, para mostrar ao mundo todo o potencial que o seu
+            produto/negócio tem.
+          </p>
         </div>
-      </main>
-      <!-- /*fim conteúdo principal */  -->
-      
-      <!-- /* seção de portifólio com demonstrações */ -->
-      <section class="portifolio-section">
-
-        <div class="container-portifolio-section">
-          portifolio-section
-          <div class="card-0 card">card-0</div>
-          <div class="card-1 card">card-1</div>
-          <div class="card-2 card">card-2</div>
-          <div class="card-3 card">card-3</div>
-          <div class="btn-ver-mais"><button>CTN</button></div>
+        <div class="ilustr-section">
+          <img src="./assets/img/programmer.png" alt="" srcset="">
         </div>
-      </section> 
-      <!-- /* Fim portifólio demo*/  -->
-      
-      <!-- /* Galeria com projetos e clientes  */ -->
-      <section class="gallery-section">
+        <div class="contato-section">
+          <h3>Me encontre por aqui</h3>
+          <ul class="info-redes-sociais">
+            <li><a href="">li</a></li>
+            <li><a href="">gh</a></li>
+            <li><a href="">ig</a></li>
+            <li><a href="">tt</a></li>
 
-        <div class="container-gallery ">
-          <div class="lang-1">lang-1</div>
-          <div class="lang-2">lang-2</div>
-          <div class="lang-3">lang-3</div>
-          <div class="lang-4">lang-4</div>
-          <div class="lang-5">lang-5</div>
-          <div class="lang-6">lang-6</div>
-          <div class="lang-7">lang-7</div>
-          <div class="lang-8">lang-8</div>
-          <div class="lang-9">lang-9</div>
-          <div class="lang-10">lang-10</div>
-          <div class="lang-11">lang-11</div>
-          <div class="lang-12">lang-12</div>
+          </ul>
+
         </div>
-      </section>
-      <!-- /* fim galeria clientes*/  -->
-      
-      <!-- /*Tecnologias utilizadas*/ -->
-      <section class="tech-section">
-        
+      </div>
+    </main>
+    <!-- /*fim conteúdo principal */  -->
 
+    <!-- /* seção de portifólio com demonstrações */ -->
+    <section class="portifolio-section">
+      <div class="container-portifolio-section">
+        <div class="card-0 card">
+          <div class="portifolio-card-header">
+            <img src="./assets/img/generico.jpg" alt="imagem projeto
+                descrição" width="50%">
+          </div>
+          <div class="portifolio-card-texto">
+            <h3>nome temporário</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              dignissimos dolorum assumenda inventore accusantium rerum
+              maiores iure cupiditate iste eaque cumque nam placeat
+              laudantium, harum natus dicta.</p>
+          </div>
+          <div class="portifolio-card-buttons">
+            <button class="portifolio-btn-gh">github</button>
+            <button class="portifolio-btn-live">Preview</button>
+          </div>
+        </div>
+        <div class="card-1 card">
+          <div class="portifolio-card-header">
+            <img src="./assets/img/generico.jpg" alt="imagem projeto
+                descrição" width="50%">
+          </div>
+          <div class="portifolio-card-texto">
+            <h3>nome temporário</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              dignissimos dolorum assumenda inventore accusantium rerum
+              maiores iure cupiditate iste eaque cumque nam placeat
+              laudantium, harum natus dicta.</p>
+          </div>
+          <div class="portifolio-card-buttons">
+            <button class="portifolio-btn-gh">github</button>
+            <button class="portifolio-btn-live">Preview</button>
+          </div>
+        </div>
+        <div class="card-2 card">
+          <div class="portifolio-card-header">
+            <img src="./assets/img/generico.jpg" alt="imagem projeto
+                descrição" width="50%">
+          </div>
+          <div class="portifolio-card-texto">
+            <h3>nome temporário</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              dignissimos dolorum assumenda inventore accusantium rerum
+              maiores iure cupiditate iste eaque cumque nam placeat
+              laudantium, harum natus dicta.</p>
+          </div>
+          <div class="portifolio-card-buttons">
+            <button class="portifolio-btn-gh">github</button>
+            <button class="portifolio-btn-live">Preview</button>
+          </div>
+        </div>
+        <div class="card-3 card">
+          <div class="portifolio-card-header">
+            <img src="./assets/img/generico.jpg" alt="imagem projeto
+                descrição" width="50%">
+          </div>
+          <div class="portifolio-card-texto">
+            <h3>nome temporário</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil
+              dignissimos dolorum assumenda inventore accusantium rerum
+              maiores iure cupiditate iste eaque cumque nam placeat
+              laudantium, harum natus dicta.</p>
+          </div>
+          <div class="portifolio-card-buttons">
+            <button class="portifolio-btn-gh">github</button>
+            <button class="portifolio-btn-live">Preview</button>
+          </div>
+        </div>
+        <div class="btn-ver-mais"><button>BTN</button></div>
+      </div>
+    </section>
+    <!-- /* Fim portifólio demo*/  -->
 
+    <!-- /* Galeria com projetos e clientes  */ -->
+    <section class="lang-section">
 
+      <div class="container-lang ">
+        <div class="lang-1"><i class="fa-brands fa-node"></i></div>
+        <div class="lang-2"><i class="fa-brands fa-php"></i></div>
+        <div class="lang-3"><i class="fa-brands fa-java"></i></div>
+        <div class="lang-4"><i class="fa-brands fa-html5"></i></div>
+        <div class="lang-5"><i class="fa-brands fa-css3-alt"></i></div>
+        <div class="lang-6"><i class="fa-brands fa-square-js"></i></div>
+        <div class="lang-7"><i class="fa-brands fa-git"></i></div>
+        <div class="lang-8"><i class="fa-brands fa-bootstrap"></i></div>
+        <div class="lang-9"><i class="fa-brands fa-vuejs"></i></div>
+        <div class="lang-10"><i class="fa-solid fa-c"></i></div>
+        <div class="lang-11"><i class="fa-brands fa-golang"></i></div>
+        <div class="lang-12"><i class="fa-brands fa-angular"></i></div>
+      </div>
+    </section>
+    <!-- /* fim galeria clientes*/  -->
 
-      </section>
-      <!-- /* */  -->
-      
-      <!-- /* Rodapé principal*/ -->
-      <footer class="footer">footer</footer>
-      <!-- /* Fim Rodapé*/ -->
+    <!-- /*Tecnologias utilizadas*/ -->
+    <section class="carousel-section">
+      <div class="carousel-section-text-container">
+        <h2>Parceirias</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum
+          eveniet adipisci, ipsum nemo corporis ex?
+        </p>
+      </div>
+      <div class="carousel-container">
+        <div class="carousel-img">
+          <img src="./assets/img/placeholder.png" width="350px" alt="" srcset="">
+          <img src="./assets/img/placeholder.png" width="350px" alt="" srcset="">
+          <img src="./assets/img/placeholder.png" width="350px" alt="" srcset="">
+          <div class="img-parceiros-coments">
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam
+              provident explicabo consequuntur voluptatibus cupiditate ducimus
+              iusto, aspernatur natus aperiam debitis adipisci quidem velit
+              odio laborum dolore sapiente ratione, saepe ut?</p>
+          </div>
+        </div>
+        <div class="btn-parceiros-coments">
+          <a href="" class="left-btn-parceiros"> &leftarrow; </a>
+          <a href="" class="right-btn-parceiros"> &rightarrow; </a>
+        </div>
+      </div>
+  </div>
+  </section>
+  <!-- /* */  -->
+
+  <!-- /* Rodapé principal*/ -->
+  <footer class="footer">
+    <div class="rodape-simples-geral">
+      <ul class="left-menu-footer">
+        <a href="#index.html">home</a>
+        <a href="#index.html">home</a>
+        <a href="#index.html">home</a>
+        <a href="#index.html">home</a>
+      </ul>
+      <p><span id="ano-atual-footer">2022</span> Criado por <span><em>Murilo Apolonio</em> &reg; </p>
+      <ul>
+        <li><a href="#">li</a></li>
+        <li><a href="#">gh</a></li>
+        <li><a href="#">tw</a></li>
+        <li><a href="#">ig</a></li>
+      </ul>
     </div>
-    <!-- /* fim container principal */ -->
-  </body>
+  </footer>
+  <!-- /* Fim Rodapé*/ -->
+  </div>
+  <!-- /* fim container principal */ -->
+</body>
+
 </html>
