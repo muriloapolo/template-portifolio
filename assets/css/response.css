@@ -1,32 +1,41 @@
-@media screen and (min-width: 320px){
-    .container{
-     
+@media screen and (max-width: 320px) {
+    .info-section h1 {
+        margin-top: 1rem;        
+
+    }
+    .info-id-principal {
+        font-size: 1.3rem;
     }
 }
 
-@media screen and (min-width: 580px){
-  
-}
-@media screen and (max-width: 768px){
- .main-section-container{
-    grid-template-areas:
-        "info-section" 
-        "ilustr-section"
-        "contato-section";
-    grid-template-columns: 1fr;
-    grid-template-rows: .50fr 0.50fr 0.3fr;
- }
+@media screen and (min-width: 580px) {}
 
- .container-portifolio-section {
-    grid-template-areas:
-        "card-0" 
-        "card-1" 
-        "card-2" 
-        "card-3" 
-        "btn-ver-mais";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
- }
+@media screen and (max-width: 768px) {
+    .main-section-container {
+        grid-template-areas:
+            "info-section"
+            "ilustr-section"
+            "contato-section";
+        grid-template-columns: 1fr;
+        /* grid-template-rows: .50fr 0.50fr 0.3fr; */
+       
+    }
+
+    .container-portifolio-section {
+        grid-template-areas:
+            "card-0"
+            "card-1"
+            "card-2"
+            "card-3"
+            "btn-ver-mais";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
+    }
+/*Imagem da área principal - ilustrações */
+    .ilustr-section > img{
+        width: 50%;
+        
+    }
 
 
 }
