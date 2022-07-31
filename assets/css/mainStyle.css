@@ -67,7 +67,7 @@ html {
         "main-section"
         "portifolio-section"
         "lang-section"
-        "tech-section"
+        "carousel-section"
         "footer";
     grid-template-columns: 1fr;
     /* grid-template-rows: 80px 100vh 100vh 100vh 100vh 40px; */
@@ -528,12 +528,7 @@ margin-left: 10px;
 .lang-6 i {
     color: rgb(255, 238, 0);
     background-clip: text;
-
-
 }
-
-
-
 .lang-11 {
     grid-area: lang-11;
 }
@@ -561,10 +556,88 @@ margin-left: 10px;
 
 
 /* --------------Parceirias--------------- */
-.tech-section {
-    grid-area: tech-section;
+.carousel-section {
+    grid-area: carousel-section;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;   
+    width: 100%;
+    height: 100%;
+
+  
+   
+}
+.carousel-section h1{
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 2px solid var(--cor-texto-dark-mode);  
+    border-width: 5px;
+    font-size: 2.5rem;
+    font-family: var(--fonte-titulo);
+    letter-spacing: 0.2rem;
+    font-weight: 900;
+    text-align: center;
+    width: 300px;    
+    margin: 5rem 0;
+    text-shadow: 1px 1px 20px rgb(0, 0, 0);
 }
 
+/*CAROUSEL BÁSICO*/
+.slider{
+    margin: 0 auto;
+    width: 800px;
+    height: 400px;  
+    overflow: hidden;
+    
+}
+
+.slides{
+    width: 400%;
+    height: 400px;
+    display: flex;
+}
+.slides input{
+    display: none;
+}
+.slide{
+    width: 25%;
+    position: relative;
+}
+.slide img{
+    width: 800px;
+
+}
+.manual-navigation{
+    position: absolute;
+    width: 800px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+.manual-btn{
+    border: 2px solid #fff;
+    padding: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 1s;    
+}
+.manual-btn:not(:last-child){
+    margin-right: 40px;
+}
+.manual-btn:hover{
+    background-color: rgb(88, 78, 78);
+}
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+#radio2:checked ~ .first{
+    margin-left: -25%;
+}
+#radio3:checked ~ .first{
+    margin-left: -50%;
+}
 
 /* -------------------------------------------*/
 .footer {
