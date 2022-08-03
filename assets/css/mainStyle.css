@@ -72,7 +72,7 @@ html {
     grid-template-columns: 1fr;
     /* grid-template-rows: 80px 100vh 100vh 100vh 100vh 40px; */
     /* grid-template-rows: 20vh 100vh 100vh 100vh 100vh 20vh; */
-    grid-template-rows: 70px auto 1fr auto auto .15fr;
+    grid-template-rows: 70px auto 1fr auto auto auto;
 
     background-color: var(--cor-texto-dark);
     color: var(--cor-texto-dark-mode);
@@ -265,6 +265,8 @@ html {
     flex-direction: column;
     justify-content: center;
     align-items: center;  
+
+
 }
 .portifolio-section h1{
     text-transform: uppercase;
@@ -393,10 +395,12 @@ html {
 
 
 .btn-ver-mais {
+
     grid-area: btn-ver-mais;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 50px 0;
 }
 
 .link-btn-ver-mais{   
@@ -671,8 +675,59 @@ height: 320px;}
     .prev, .next,.text {font-size: 11px}
   }
 
-/* -------------------------------------------*/
+/* -------------Rodapé--------------*/
 .footer {
-    background-color: #000;
+    background-color: var(--cor-background);
     grid-area: footer;
 }
+
+.rodape-simples-geral{
+display: grid;
+  width: 100%;
+  height: 100%;
+  grid-template-areas: "menu-footer redes-footer"
+  "direitos-footer direitos-footer";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 2fr 0.5fr;
+}
+
+  .menu-footer {
+    grid-area: menu-footer;   
+  }
+  .menu-footer ul,.redes-footer ul{
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    padding-top: 2rem;
+  }
+  .menu-footer ul li a{
+    font-family: var(--fonte-menu);
+    text-transform: capitalize;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+   padding: 0.5rem 0;
+   color: var(--cor-texto-white);
+   text-decoration: none;
+   transition: all 0.5s
+  }
+
+  .menu-footer ul li a:hover{
+    border-bottom: 1px solid var(--cor-texto-dark-mode);
+  }
+  .redes-footer {
+    grid-area: redes-footer;
+  }
+  .redes-footer ul li a{
+    color: var(--cor-texto-white);
+    text-decoration: none;
+    transition: all 0.5s
+  }
+  .direitos-footer {
+    grid-area: direitos-footer;
+    text-align: center;
+    padding-top: 1rem;
+    font-family: var(--fonte-subtitulo);
+    font-weight: 320;
+ 
+  }

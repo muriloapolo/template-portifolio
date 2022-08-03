@@ -16,8 +16,17 @@
 
 }
 
-@media screen and (min-width: 580px) {
-
+@media screen and (max-width: 580px) {
+    .rodape-simples-geral{
+        display: grid;
+          width: 100%;
+          height: 100%;
+          grid-template-areas: "menu-footer"
+           "redes-footer"
+          "direitos-footer";
+          grid-template-columns: 1fr;
+          grid-template-rows:1fr 1fr 0.5fr;
+        }
 }
 
 @media screen and (max-width: 768px) {
@@ -27,7 +36,7 @@
             "ilustr-section"
             "contato-section";
         grid-template-columns: 1fr;
-        /* grid-template-rows: .50fr 0.50fr 0.3fr; */
+        grid-template-rows: auto auto auto;
        
     }
 
@@ -39,7 +48,7 @@
             "card-3"
             "btn-ver-mais";
         grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 0.5fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr auto;
     }
 /*Imagem da área principal - ilustrações */
     .ilustr-section > img{
