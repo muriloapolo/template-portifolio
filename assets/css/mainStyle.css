@@ -26,7 +26,7 @@ Open Sans light 300 para subtítulos
 /* Variáveis */
 :root {
     --fonte-titulo: 'Roboto', sans-serif;
-    --fonte-subtitulo: font-family: 'Open Sans', sans-serif;
+    --fonte-subtitulo: 'Open Sans', sans-serif;
     --fonte-menu: 'Prompt', sans-serif;
     --fonte-texto-interno: 'Poppins', sans-serif;
     /* cores variaveis */
@@ -60,7 +60,7 @@ html {
 #DEE3E3     -cor---------- */
 .container {
     display: grid;
-    width: 100%;
+    width: 100vw;
     height: 100%;
     grid-template-areas:
         "header"
@@ -69,11 +69,8 @@ html {
         "lang-section"
         "carousel-section"
         "footer";
-    grid-template-columns: 1fr;
-    /* grid-template-rows: 80px 100vh 100vh 100vh 100vh 40px; */
-    /* grid-template-rows: 20vh 100vh 100vh 100vh 100vh 20vh; */
+    grid-template-columns: 100%;
     grid-template-rows: 70px auto 1fr auto auto auto;
-
     background-color: var(--cor-texto-dark);
     color: var(--cor-texto-dark-mode);
     /* background-color: var(--cor-texto-white);
@@ -81,8 +78,9 @@ html {
     background-repeat: repeat;
     background-size: contain;
     max-width: 1400px;
+    min-width: 320px;
     margin: 0 auto;
-
+  
 }
 
 
@@ -109,7 +107,7 @@ html {
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-family: var(--fonte-menu);
-    font-weight: 300;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     transition: all 0.5s;
@@ -151,9 +149,6 @@ html {
 /* -----------Container principal-----------*/
 .main-section {
     grid-area: main-section;
-}
-
-.main-section-container {
     display: grid;
     width: 100%;
     height: 100%;
@@ -163,6 +158,7 @@ html {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 0.25fr;
 }
+
 
 .info-section {
     box-sizing: border-box;
@@ -234,20 +230,21 @@ html {
 }
 
 .info-redes-sociais li a {
-
     display: block;
     color: var(--cor-texto-dark-mode);
     text-decoration: none;
-    padding: 5px 10px;
-    font-size: 2rem;
+    padding: 0.2rem 0.5rem;
+    font-size: 1em;
     transition: all 0.5s;
     cursor: pointer;
 }
+.info-redes-sociais li a i{
+    font-size: 3em;
+}
 
 .info-redes-sociais a:hover {
-    color: #ffffff;
-
-    transform: scale(1.2) rotateZ(10deg);
+    color: var(--cor-texto-white);
+    transform: scale(1.1) rotateZ(10deg);
 }
 
 .info-redes-sociais a:active {
@@ -261,45 +258,45 @@ html {
 
 .portifolio-section {
     grid-area: portifolio-section;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+        "port-header port-header"
+        "card-0 card-1"
+        "card-2 card-3"
+        "btn-ver-mais btn-ver-mais";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    row-gap: 1rem;
 
 
 }
 
-.portifolio-section h1 {
-    text-transform: uppercase;
-    display: block;
+ .port-header {
+    grid-area: port-header;
+text-align: center;
+
+}
+.port-header h1 {
+    margin-top: 3rem;
+    display: inline-block;
+    text-transform: uppercase;    
     border-bottom: 2px solid var(--cor-texto-dark-mode);
     border-width: 5px;
     font-size: 2.5rem;
     font-family: var(--fonte-titulo);
     letter-spacing: 0.2rem;
     font-weight: 900;
-    text-align: center;
-    width: 300px;
-    margin: 5rem 0;
+    height: auto;     
     text-shadow: 1px 1px 20px rgb(0, 0, 0);
 
 
 }
 
-.container-portifolio-section {
-    display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-areas:
-        "card-0 card-1"
-        "card-2 card-3"
-        "btn-ver-mais btn-ver-mais";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    row-gap: 1rem;
-}
 
 .card-0 {
+ 
     grid-area: card-0;
 
 }
@@ -321,7 +318,7 @@ html {
     border: 1px solid white;
     box-sizing: border-box;
     padding: 10px;
-    width: 80%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -572,7 +569,7 @@ html {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+   align-items: center;
     width: 100%;
     height: 100%;
     margin-bottom: 50px;
@@ -582,6 +579,7 @@ html {
 }
 
 .carousel-section h1 {
+    display: inline-block;
     text-transform: uppercase;
     display: block;
     border-bottom: 2px solid var(--cor-texto-dark-mode);
@@ -594,115 +592,6 @@ html {
     width: 300px;
     margin: 5rem 0;
     text-shadow: 1px 1px 20px rgb(0, 0, 0);
-}
-
-/*CAROUSEL BÁSICO*/
-
-.mySlides {
-    display: none
-}
-
-.mySlides img {
-    width: 320px;
-    height: 320px;
-}
-
-.slideshow-container {
-    max-width: 100%;
-    position: relative;
-    margin: auto;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
-}
-
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
-
-
-/* Caption text */
-.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active,
-.dot:hover {
-    background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {
-        opacity: .4
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-
-    .prev,
-    .next,
-    .text {
-        font-size: 11px
-    }
 }
 
 /* -------------Rodapé--------------*/
@@ -774,4 +663,29 @@ html {
     font-weight: 500;
 
 
+}
+/* SWEPPER FRAMEWORK PARA SLIDE */
+.swiper {
+    width: 80%;
+    height: 300px;
+  }
+  .swiper-slide{
+    display: flex;
+    justify-content: center;
+  }
+  .swiper-slide img{
+    width: 90%;   
+   
+    object-fit: cover;
+  }
+
+
+/* Ajustes de design */
+/* Caso CSS FALHE */
+
+.no_css{
+    position: absolute;
+    left: -999em;
+    width: 1em;
+    overflow: hidden;
 }

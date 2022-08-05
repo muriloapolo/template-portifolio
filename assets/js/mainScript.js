@@ -19,38 +19,32 @@ btnMobile.addEventListener('touchstart', toggleMenu);
 const infosHeader = ["Desenvolvedor", "programador", "Front-End Developer"];
 
 /*Adicionar classe no html*/
-//Div Linguagens???
+//Div Linguagens?
 let langsClasseChildren = document.querySelector('.container-lang').children
 Array.from(langsClasseChildren).forEach((langDiv)=>{
 langDiv.classList.add('centralize')
 })
 
+/* SWEEPER FRAMEWORK */
 
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
 
-/* Slide Show*/ 
-let slideIndex = 1;
-showSlides(slideIndex);
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
-}
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});
