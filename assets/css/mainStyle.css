@@ -1,202 +1,172 @@
-/* Fontes */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,300;1,300&family=Prompt:wght@300&family=Roboto:wght@500&display=swap');
-/* Font Awesomne Icons*/
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css');
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:ital,wght@0,100;0,300;1,300&family=Prompt:wght@300&family=Roboto:wght@500&display=swap);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css);
 
-/*
-Poppins Thin 100 Texto interno
-Prompt Light 300 Italic menu
-Roboto Medium 500 - títulos 
-Open Sans light 300 para subtítulos
-*/
+#logo,
+#menu a {
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: .1rem
+}
 
+#logo,
+.info-section h1 {
+    font-family: var(--fonte-titulo)
+}
 
-/* Cores
+#header-menu,
+*,
+.card,
+.info-section,
+html {
+    box-sizing: border-box
+}
 
+.container,
+.info-redes-sociais li a,
+.link-btn-ver-mais {
+    color: var(--cor-texto-dark-mode)
+}
 
-#BBBFBF     - cor
-#7A7D7D     - sombra
-#F8FCFC     -cor
-#3C3D3D     -sombra
-#DEE3E3     -cor
+.lang-4 i,
+.lang-5 i {
+    background-clip: text;
+    -webkit-text-fill-color: transparent
+}
 
-*/
+#logo,
+#menu a,
+.menu-footer ul li a {
+    letter-spacing: .1rem
+}
 
+#menu a,
+.info-redes-sociais li a,
+.link-btn-ver-mais,
+.menu-footer ul li a,
+.redes-footer ul li a {
+    text-decoration: none;
+    transition: .5s
+}
 
-/* Variáveis */
 :root {
     --fonte-titulo: 'Roboto', sans-serif;
     --fonte-subtitulo: 'Open Sans', sans-serif;
     --fonte-menu: 'Prompt', sans-serif;
     --fonte-texto-interno: 'Poppins', sans-serif;
-    /* cores variaveis */
     --cor-background: #BBBFBF;
     --cor-sombra: #7A7D7D;
     --cor-texto-white: #F8FCFC;
     --cor-texto-dark: #3C3D3D;
-    --cor-texto-dark-mode: #DEE3E3;
+    --cor-texto-dark-mode: #DEE3E3
 }
-
-
-
-
 
 * {
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+    padding: 0
 }
 
 html {
-    scroll-behavior: smooth;
-    box-sizing: border-box;
+    scroll-behavior: smooth
 }
 
-/* -------
-#BBBFBF     - cor
-#7A7D7D     - sombra
-#F8FCFC     -cor
-#3C3D3D     -sombra
-#DEE3E3     -cor---------- */
 .container {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-areas:
-        "header"
-        "main-section"
-        "portifolio-section"
-        "lang-section"
-        "carousel-section"
-        "footer";
+    grid-template-areas: "header""main-section""portifolio-section""lang-section""carousel-section""footer";
     grid-template-columns: 100%;
     grid-template-rows: 70px auto 1fr auto auto auto;
     background-color: var(--cor-texto-dark);
-    color: var(--cor-texto-dark-mode);
-    /* background-color: var(--cor-texto-white);
-    color: var(--cor-texto-dark); */
     background-repeat: repeat;
     background-size: contain;
     max-width: 1400px;
     min-width: 320px;
-    margin: 0 auto;
-  
+    margin: 0 auto
 }
 
+.main-section,
+.portifolio-section {
+    width: 100%;
+    height: 100%;
+    grid-template-columns: 1fr 1fr
+}
 
-/* --------------------------------------------*/
-
-
-/* ----------------navegação principal-------------*/
 .header {
-    grid-area: header;
+    grid-area: header
 }
 
 #header-menu {
     display: flex;
-    box-sizing: border-box;
     padding: 1rem;
     align-items: center;
     justify-content: space-around;
-    background: #e7e7e7;
-
-
+    background: #e7e7e7
 }
 
 #menu a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
     font-family: var(--fonte-menu);
     font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    transition: all 0.5s;
+    display: block;
+    padding: .5rem;
+    font-family: var(--fonte-menu)
 }
 
 #header-menu a:hover {
-    background: rgba(161, 27, 27, 0.05);
+    background: rgba(161, 27, 27, .05)
 }
 
 #logo {
-    color: rgb(0, 0, 0);
     text-decoration: none;
-    text-transform: uppercase;
-    font-family: var(--fonte-titulo);
-    letter-spacing: 0.1rem;
     font-size: 1.6rem;
-    white-space: nowrap;
-
+    white-space: nowrap
 }
 
 #menu {
-
     display: flex;
     list-style-type: none;
-    gap: .5rem;
-
-}
-
-#menu a {
-    display: block;
-    padding: .5rem;
-    font-family: var(--fonte-menu);
+    gap: .5rem
 }
 
 #btnMobile {
-    display: none;
+    display: none
 }
 
-
-/* -----------Container principal-----------*/
 .main-section {
     grid-area: main-section;
     display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-areas:
-        "info-section ilustr-section"
-        "contato-section contato-section";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 0.25fr;
+    grid-template-areas: "info-section ilustr-section""contato-section contato-section";
+    grid-template-rows: 1fr 0.25fr
 }
 
-
 .info-section {
-
     grid-area: info-section;
-    box-sizing: border-box;
     padding: 20px;
     align-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 320px;
+    min-width: 320px
 }
 
 .info-section h1 {
-    font-family: var(--fonte-titulo);
     font-size: 2.2rem;
-    text-shadow: 1px 1px 20px rgb(0, 0, 0);
-    margin-top: 5rem;
+    text-shadow: 1px 1px 20px #000;
+    margin-top: 5rem
 }
 
 .info-id-principal {
     font-size: 1.7rem;
     font-family: var(--fonte-subtitulo);
     font-weight: 300;
-    margin-bottom: 3rem;
+    margin-bottom: 3rem
 }
 
 .info-id-texto {
     font-family: var(--fonte-texto-interno);
     font-style: italic;
     font-weight: 300;
-    font-size: 1.2rem;
+    font-size: 1.2rem
 }
-
-/* fim texto section*/
-
 
 .ilustr-section {
     grid-area: ilustr-section;
@@ -204,16 +174,15 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 320px;
+    min-width: 320px
 }
 
 .ilustr-section>img {
-    width: 80%;
-
+    width: 80%
 }
 
 .contato-section {
-    grid-area: contato-section;
+    grid-area: contato-section
 }
 
 .contato-section h3 {
@@ -222,8 +191,17 @@ html {
     text-align: center;
     font-family: var(--fonte-subtitulo);
     font-weight: 500;
-    text-transform: uppercase;
+    text-transform: uppercase
+}
 
+.carousel-section h1,
+.lang-section h1,
+.port-header h1 {
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    letter-spacing: .2rem;
+    font-weight: 900;
+    text-shadow: 1px 1px 20px #000
 }
 
 .info-redes-sociais {
@@ -231,98 +209,71 @@ html {
     list-style-type: none;
     text-align: center;
     justify-content: space-evenly;
-    padding: 20px;
+    padding: 20px
 }
 
 .info-redes-sociais li a {
     display: block;
-    color: var(--cor-texto-dark-mode);
-    text-decoration: none;
-    padding: 0.2rem 0.5rem;
+    padding: .2rem .5rem;
     font-size: 1em;
-    transition: all 0.5s;
     cursor: pointer;
-    font-family: var(--fonte-menu);
+    font-family: var(--fonte-menu)
 }
-.info-redes-sociais li a i{
-    font-size: 3em;
+
+.info-redes-sociais li a i {
+    font-size: 3em
 }
 
 .info-redes-sociais a:hover {
     color: var(--cor-texto-white);
-    transform: scale(1.1) rotateZ(10deg);
+    transform: scale(1.1) rotateZ(10deg)
 }
 
 .info-redes-sociais a:active {
-    color: #fff893;
-
+    color: #fff893
 }
-
-
-
-/* ------------------------------------------- */
 
 .portifolio-section {
     grid-area: portifolio-section;
     display: grid;
-    width: 100%;
-    height: 100%;
-    grid-template-areas:
-        "port-header port-header"
-        "card-0 card-1"
-        "card-2 card-3"
-        "btn-ver-mais btn-ver-mais";
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "port-header port-header""card-0 card-1""card-2 card-3""btn-ver-mais btn-ver-mais";
     grid-template-rows: 0.5fr 1fr 1fr;
-    row-gap: 1rem;
-
-
+    row-gap: 1rem
 }
 
- .port-header {
+.port-header {
     grid-area: port-header;
-text-align: center;
-
+    text-align: center
 }
+
 .port-header h1 {
     margin-top: 3rem;
     display: inline-block;
-    text-transform: uppercase;    
     border-bottom: 2px solid var(--cor-texto-dark-mode);
     border-width: 5px;
-    font-size: 2.5rem;
     font-family: var(--fonte-titulo);
-    letter-spacing: 0.2rem;
-    font-weight: 900;
-    height: auto;     
-    text-shadow: 1px 1px 20px rgb(0, 0, 0);
-
-
+    height: auto
 }
 
-
 .card-0 {
- 
-    grid-area: card-0;
-
+    grid-area: card-0
 }
 
 .card-1 {
-    grid-area: card-1;
+    grid-area: card-1
 }
 
 .card-2 {
-    grid-area: card-2;
+    grid-area: card-2
 }
 
 .card-3 {
-    grid-area: card-3;
+    grid-area: card-3
 }
 
 .card {
     margin: 0 auto;
-    border: 1px solid white;
-    box-sizing: border-box;
+    border: 1px solid #fff;
     padding: 10px;
     width: 90%;
     display: flex;
@@ -330,53 +281,48 @@ text-align: center;
     flex-direction: column;
     align-items: center;
     border-radius: 1rem;
-    height: 450px;
+    height: 450px
 }
 
 .portifolio-card-header {
-    width: 100%;
-
-
+    width: 100%
 }
 
 .portifolio-card-header img {
-    border-radius: 0.2rem;
+    border-radius: .2rem;
     width: 100%;
     object-fit: cover;
     height: 150px;
     aspect-ratio: 1/1;
-    align-self: center;
+    align-self: center
 }
 
 .portifolio-card-texto {
-
-    background-color: rgba(0, 0, 0, 0.158);
+    background-color: rgba(0, 0, 0, .158)
 }
 
 .portifolio-card-texto h3 {
     text-align: center;
     font-family: var(--fonte-titulo);
-    letter-spacing: 0.2rem;
+    letter-spacing: .2rem;
     text-transform: uppercase;
-    margin: 15px 0;
-
+    margin: 15px 0
 }
 
 .portifolio-card-texto p {
     font-style: italic;
     font-family: var(--fonte-texto-interno);
     text-indent: 3rem;
-    padding-bottom: 5px;
+    padding-bottom: 5px
 }
 
 .portifolio-card-buttons {
     width: 100%;
-
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
-    padding: 0.8rem;
+    padding: .8rem
 }
 
 .portifolio-btn-gh,
@@ -386,39 +332,33 @@ text-align: center;
     display: block;
     background-color: transparent;
     border: 1px solid var(--cor-texto-white);
-    padding: 0.5rem 2rem;
-    border-radius: 0.5rem;
-    font-family: var(--fonte-menu);
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+    font-family: var(--fonte-menu)
 }
 
 .portifolio-btn-gh:hover,
 .portifolio-btn-live:hover {
     color: var(--cor-texto-dark);
-    background-color: #ffffff;
-    box-shadow: 1px 1px 10px var(--cor-sombra);
+    background-color: #fff;
+    box-shadow: 1px 1px 10px var(--cor-sombra)
 }
 
-
-
 .btn-ver-mais {
-
     grid-area: btn-ver-mais;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px 0;
+    padding: 50px 0
 }
 
 .link-btn-ver-mais {
     background-color: transparent;
     border: 1px solid var(--cor-texto-white);
     padding: 1rem 3rem;
-    border-radius: 0.5rem;
-    color: var(--cor-texto-dark-mode);
-    text-decoration: none;
+    border-radius: .5rem;
     text-align: center;
-    font-size: 1.2rem;
-    transition: all 0.5s
+    font-size: 1.2rem
 }
 
 .link-btn-ver-mais:hover {
@@ -426,54 +366,43 @@ text-align: center;
     background-color: #83858b;
     box-shadow: 1px 1px 10px var(--cor-sombra);
     color: #070808;
-    transform: scale(1.1);
+    transform: scale(1.1)
 }
 
 .link-btn-ver-mais:hover>i {
-    color: #48ff00;
+    color: #48ff00
 }
 
 .link-btn-ver-mais:active>i {
-    margin-left: 10px;
+    margin-left: 10px
 }
 
-/* -------------Linguagens------------ */
 .lang-section {
     grid-area: lang-section;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: center
 }
 
 .container-lang {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-areas: "lang-1 lang-4 lang-9"
-        "lang-1 lang-5 lang-10"
-        "lang-2 lang-6 lang-11"
-        "lang-3 lang-7 lang-11"
-        "lang-3 lang-7 lang-12"
-        "lang-8 lang-8 lang-8";
+    grid-template-areas: "lang-1 lang-4 lang-9""lang-1 lang-5 lang-10""lang-2 lang-6 lang-11""lang-3 lang-7 lang-11""lang-3 lang-7 lang-12""lang-8 lang-8 lang-8";
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 2fr 1fr 1fr 1fr 1fr .8fr;
-
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr .8fr
 }
 
+.carousel-section h1,
 .lang-section h1 {
-    text-transform: uppercase;
     display: block;
     border-bottom: 2px solid var(--cor-texto-dark-mode);
     border-width: 5px;
-    font-size: 2.5rem;
     font-family: var(--fonte-titulo);
-    letter-spacing: 0.2rem;
-    font-weight: 900;
     text-align: center;
     width: 300px;
-    margin: 5rem 0;
-    text-shadow: 1px 1px 20px rgb(0, 0, 0);
+    margin: 5rem 0
 }
 
 .centralize {
@@ -481,146 +410,114 @@ text-align: center;
     justify-content: center;
     align-items: center;
     font-size: 3rem;
-    opacity: 0.4;
+    opacity: .4
+}
 
+.lang-4,
+.lang-5,
+.lang-6,
+.lang-7,
+.lang-8 {
+    opacity: 1
 }
 
 .lang-1 {
-    grid-area: lang-1;
+    grid-area: lang-1
 }
 
 .lang-4 {
-    grid-area: lang-4;
-    opacity: 1;
-
+    grid-area: lang-4
 }
 
 .lang-4 i {
-    color: rgb(206, 5, 5);
-    background-image: linear-gradient(90deg, rgba(255, 177, 9, 0.753) 35%, rgb(255, 165, 112) 100%);
+    color: #ce0505;
+    background-image: linear-gradient(90deg, rgba(255, 177, 9, .753) 35%, #ffa570 100%);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .lang-9 {
-    grid-area: lang-9;
+    grid-area: lang-9
 }
 
 .lang-5 {
-    grid-area: lang-5;
-    opacity: 1;
-
-
+    grid-area: lang-5
 }
 
 .lang-5 i {
-    color: rgb(128, 128, 255);
-    background-image: linear-gradient(90deg, rgb(74, 74, 252) 35%, rgb(137, 192, 255) 100%);
+    color: #8080ff;
+    background-image: linear-gradient(90deg, #4a4afc 35%, #89c0ff 100%);
     background-clip: text;
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
-
 .lang-10 {
-    grid-area: lang-10;
-
+    grid-area: lang-10
 }
 
 .lang-2 {
-    grid-area: lang-2;
+    grid-area: lang-2
 }
 
 .lang-6 {
-
-    grid-area: lang-6;
-    opacity: 1;
-
+    grid-area: lang-6
 }
 
 .lang-6 i {
-    color: rgb(255, 238, 0);
-    background-clip: text;
+    color: #fe0;
+    background-clip: text
 }
 
 .lang-11 {
-    grid-area: lang-11;
+    grid-area: lang-11
 }
 
 .lang-3 {
-    grid-area: lang-3;
+    grid-area: lang-3
 }
 
 .lang-7 {
     grid-area: lang-7;
-    color: #000;
-    opacity: 1;
+    color: #000
 }
 
 .lang-12 {
-    grid-area: lang-12;
+    grid-area: lang-12
 }
 
 .lang-8 {
     grid-area: lang-8;
-    opacity: 1;
-    color: rgb(0, 83, 160);
+    color: #0053a0
 }
 
-
-
-/* --------------Parceirias--------------- */
 .carousel-section {
     grid-area: carousel-section;
     display: flex;
     flex-direction: column;
     justify-content: center;
-   align-items: center;
+    align-items: center;
     width: 100%;
     height: 100%;
     margin-bottom: 50px;
-    border-bottom: 1px solid #fff;
-
-
+    border-bottom: 1px solid #fff
 }
 
-.carousel-section h1 {
-    display: inline-block;
-    text-transform: uppercase;
-    display: block;
-    border-bottom: 2px solid var(--cor-texto-dark-mode);
-    border-width: 5px;
-    font-size: 2.5rem;
-    font-family: var(--fonte-titulo);
-    letter-spacing: 0.2rem;
-    font-weight: 900;
-    text-align: center;
-    width: 300px;
-    margin: 5rem 0;
-    text-shadow: 1px 1px 20px rgb(0, 0, 0);
-}
-
-/* -------------Rodapé--------------*/
 .footer {
-
     background-color: var(--cor-texto-dark);
-    grid-area: footer;
-
+    grid-area: footer
 }
 
 .rodape-simples-geral {
     display: grid;
     width: 100%;
     height: 100%;
-    grid-template-areas: "menu-footer redes-footer"
-        "direitos-footer direitos-footer";
+    grid-template-areas: "menu-footer redes-footer""direitos-footer direitos-footer";
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 2fr 0.5fr;
+    grid-template-rows: 2fr 0.5fr
 }
 
 .menu-footer {
-    grid-area: menu-footer;
+    grid-area: menu-footer
 }
 
 .menu-footer ul,
@@ -629,37 +526,32 @@ text-align: center;
     display: flex;
     list-style-type: none;
     justify-content: space-around;
-    padding-top: 2rem;
+    padding-top: 2rem
 }
 
 .menu-footer ul li a {
     font-family: var(--fonte-menu);
     text-transform: capitalize;
-    letter-spacing: 0.1rem;
     font-weight: 500;
-    padding: 0.5rem 0;
-    color: var(--cor-texto-white);
-    text-decoration: none;
-    transition: all 0.5s
+    padding: .5rem 0;
+    color: var(--cor-texto-white)
 }
 
 .menu-footer ul li a:hover {
-    text-shadow: 1px 1px 1px rgb(8, 0, 0);
-    border-bottom: 1px solid var(--cor-texto-dark-mode);
+    text-shadow: 1px 1px 1px #080000;
+    border-bottom: 1px solid var(--cor-texto-dark-mode)
 }
 
 .redes-footer {
     grid-area: redes-footer;
-    border-left: 1px solid rgba(0, 0, 0, 0.26);
+    border-left: 1px solid rgba(0, 0, 0, .26)
 }
 
 .redes-footer ul li a {
     color: var(--cor-texto-white);
-    text-decoration: none;
-    transition: all 0.5s;
-    padding: 0.5rem 0.8rem;
+    padding: .5rem .8rem;
     font-size: 2.2rem;
-    text-shadow: 1px 1px 1px #000000;
+    text-shadow: 1px 1px 1px #000
 }
 
 .direitos-footer {
@@ -667,32 +559,27 @@ text-align: center;
     text-align: center;
     padding-top: 1rem;
     font-family: var(--fonte-subtitulo);
-    font-weight: 500;
-
-
+    font-weight: 500
 }
-/* SWEPPER FRAMEWORK PARA SLIDE */
+
 .swiper {
     width: 80%;
-    height: 300px;
-  }
-  .swiper-slide{
+    height: 300px
+}
+
+.swiper-slide {
     display: flex;
-    justify-content: center;
-  }
-  .swiper-slide img{
-    width: 90%;   
-   
-    object-fit: cover;
-  }
+    justify-content: center
+}
 
+.swiper-slide img {
+    width: 90%;
+    object-fit: cover
+}
 
-/* Ajustes de design */
-/* Caso CSS FALHE */
-
-.no_css{
+.no_css {
     position: absolute;
     left: -999em;
     width: 1em;
-    overflow: hidden;
+    overflow: hidden
 }

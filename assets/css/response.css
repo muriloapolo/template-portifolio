@@ -1,96 +1,73 @@
-@media screen and (max-width: 320px) {
-    #logo{
-        font-size: 1.3rem;      
-       
+@media screen and (max-width:320px) {
+    #logo {
+        font-size: 1.3rem
     }
-    .info-section{
-        width: 320px;
+
+    .info-section {
+        width: 320px
     }
-    
+
     .info-section h1 {
-
-        margin-top: 1rem;        
-
+        margin-top: 1rem
     }
+
     .info-id-principal {
-        font-size: 1.3rem;
+        font-size: 1.3rem
     }
-    .ilustr-section{
-        width: 320px;
+
+    .ilustr-section {
+        width: 320px
     }
-    .info-redes-sociais{
-        width: 320px;
+
+    .info-redes-sociais {
+        width: 320px
     }
+
     .redes-footer {
-       margin-bottom: 30px;
+        margin-bottom: 30px
     }
-
 }
 
-@media screen and (max-width: 580px) {
-    .rodape-simples-geral{
+@media screen and (max-width:580px) {
+    .rodape-simples-geral {
         display: grid;
-          width: 100%;
-          height: 100%;
-          grid-template-areas: "menu-footer"
-           "redes-footer"
-          "direitos-footer";
-          grid-template-columns: 1fr;
-          grid-template-rows:1fr 1fr 0.5fr;
-        }
+        width: 100%;
+        height: 100%;
+        grid-template-areas: "menu-footer""redes-footer""direitos-footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 0.5fr
+    }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width:768px) {
     .main-section {
-        grid-template-areas:
-            "info-section"
-            "ilustr-section"
-            "contato-section";
+        grid-template-areas: "info-section""ilustr-section""contato-section";
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
-       
+        grid-template-rows: auto auto auto
     }
 
     .portifolio-section {
-        grid-template-areas:
-            "port-header"
-            "card-0"
-            "card-1"
-            "card-2"
-            "card-3"
-            "btn-ver-mais";
+        grid-template-areas: "port-header""card-0""card-1""card-2""card-3""btn-ver-mais";
         grid-template-columns: 1fr;
-        grid-template-rows: 0.25fr 1fr 1fr 1fr 1fr auto;
-    }
-/*Imagem da área principal - ilustrações */
-    .ilustr-section > img{
-        width: 50%;
-        
-    }
-    /* Portifolio área*/
-
-
-    .portifolio-section h1{
-        margin: 2rem 0;
-    }
-    .container-lang{
-    grid-template-areas: "lang-12 lang-1"
-    "lang-2 lang-3"
-    "lang-4 lang-5"
-    "lang-6 lang-7"
-    "lang-8 lang-9"
-    "lang-10 lang-11";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 80px 80px 80px 80px 80px 80px;
+        grid-template-rows: 0.25fr 1fr 1fr 1fr 1fr auto
     }
 
+    .ilustr-section>img {
+        width: 50%
+    }
+
+    .portifolio-section h1 {
+        margin: 2rem 0
+    }
+
+    .container-lang {
+        grid-template-areas: "lang-12 lang-1""lang-2 lang-3""lang-4 lang-5""lang-6 lang-7""lang-8 lang-9""lang-10 lang-11";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 80px 80px 80px 80px 80px 80px
+    }
 }
 
-
-
-
-@media screen and (max-width: 960px) {
-
+@media screen and (max-width:960px) {
     #menu {
         display: block;
         position: absolute;
@@ -102,20 +79,20 @@
         z-index: 1000;
         transition: 0.6s;
         visibility: hidden;
-        overflow-y: hidden;
+        overflow-y: hidden
     }
 
     #nav.active #menu {
         display: block;
         height: calc(100vh - 70px);
         visibility: visible;
-        overflow-y: auto;
+        overflow-y: auto
     }
 
     #menu a {
         padding: 1rem 0;
         margin: 0 1rem;
-        border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+        border-bottom: 2px solid rgba(0, 0, 0, .05)
     }
 
     #btnMobile {
@@ -125,12 +102,12 @@
         border: none;
         background: none;
         cursor: pointer;
-        gap: .5rem;
+        gap: .5rem
     }
 
     #hamburger {
         width: 20px;
-        border-top: 2px solid;
+        border-top: 2px solid
     }
 
     #hamburger::after,
@@ -141,19 +118,19 @@
         height: 2px;
         background-color: currentColor;
         margin-top: 5px;
-        position: relative;
+        position: relative
     }
 
     #nav.active #hamburger {
-        border-top-color: transparent;
+        border-top-color: transparent
     }
 
     #nav.active #hamburger::before {
-        transform: rotate(135deg);
+        transform: rotate(135deg)
     }
 
     #nav.active #hamburger::after {
         transform: rotate(-135deg);
-        top: -7px;
+        top: -7px
     }
 }
