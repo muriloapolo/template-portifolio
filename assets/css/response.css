@@ -3,6 +3,9 @@
         font-size: 1.3rem;      
        
     }
+    .info-section{
+        width: 320px;
+    }
     
     .info-section h1 {
 
@@ -11,6 +14,12 @@
     }
     .info-id-principal {
         font-size: 1.3rem;
+    }
+    .ilustr-section{
+        width: 320px;
+    }
+    .info-redes-sociais{
+        width: 320px;
     }
     .redes-footer {
        margin-bottom: 30px;

@@ -50,6 +50,7 @@ Open Sans light 300 para subtítulos
 
 html {
     scroll-behavior: smooth;
+    box-sizing: border-box;
 }
 
 /* -------
@@ -162,13 +163,15 @@ html {
 
 
 .info-section {
-    box-sizing: border-box;
+
     grid-area: info-section;
-    padding: 1rem;
+    box-sizing: border-box;
+    padding: 20px;
     align-items: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 320px;
 }
 
 .info-section h1 {
@@ -201,6 +204,7 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 320px;
 }
 
 .ilustr-section>img {
